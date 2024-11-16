@@ -1,0 +1,343 @@
+:root {
+    /* Primary */
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+
+    /* Neutral */
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --evry-dark-blue: hsl(240, 100%, 5%);
+
+    /* font size */
+    --size-font: 15px;
+
+    /* font family */
+    --font-family-inter: "Inter", sans-serif;
+    --font-family-roboto: "Roboto", serif;
+
+    /* width */
+    --width-view: 80%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background-color: var(--off-white);
+    width: 100vw;
+    font-size: var(--size-font);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    width: var(--width-view);
+}
+
+nav ul li {
+    display: inline;
+    margin: 1rem;
+    font-size: clamp(1rem, 1vw, 2rem);
+}
+
+nav ul li a {
+    color: var(--dark-grayish-blue);
+    text-decoration: none;
+    font-family: var(--font-family-roboto);
+}
+
+nav ul li a:hover {
+    color: var(--evry-dark-blue);
+    font-family: var(--font-family-inter);
+    font-weight: 600;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    width: var(--width-view);
+    margin: 2rem 0;
+}
+
+.setion-one .image-part img {
+    width: 100%;
+}
+
+.setion-one .text-part {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+@font-face {
+    font-family: 'Inter-ExtraBold';
+    src: url("assets/fonts/static/Inter-ExtraBold.ttf");
+}
+
+.setion-one h1 {
+    font-size: clamp(2rem, 4vw, 5rem);
+    font-family: 'Inter-ExtraBold';
+    color: var(--evry-dark-blue);
+}
+
+.setion-one .text-part div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.setion-one .text-part p {
+    color: var(--dark-grayish-blue);
+    font-family: var(--font-family-inter);
+    line-height: 1.5;
+    font-size: clamp(0.8rem, 1.2vw, 2rem);
+}
+
+.setion-one .text-part button {
+    background-color: var(--soft-red);
+    border: none;
+    padding: 0.7rem clamp(0.8rem, 1.5vw, 3rem);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--evry-dark-blue);
+    font-family: var(--font-family-roboto);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.setion-one .text-part button:hover {
+    background-color: var(--soft-orange);
+}
+
+.section-two {
+    background-color: var(--evry-dark-blue);
+    color: var(--off-white);
+    padding: 1rem 1.2rem;
+    font-family: var(--font-family-inter);
+}
+
+.section-two h2 {
+    color: var(--soft-orange);
+    margin: 1rem 0;
+    font-size: clamp(1rem, 2.5vw, 3rem);
+}
+
+.section-two h3 {
+    margin-top: 1rem;
+    font-size: clamp(0.8rem, 1.1vw, 2rem);
+}
+
+.section-two p {
+    color: var(--grayish-blue);
+    font-family: var(--font-family-inter);
+    margin: 0.5rem 0;
+    font-size: clamp(0.5rem, 1.2vw, 1.5rem);
+    line-height: 2;
+}
+
+.section-two hr {
+    border: none;
+    border-top: 1px solid var(--dark-grayish-blue);
+    margin: 1.5rem 0;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: var(--width-view);
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+footer .item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+}
+
+
+
+footer .item div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer .item .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+footer .item h2 {
+    color: var(--soft-red);
+    font-family: var(--font-family-inter);
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+footer .item h3 {
+    color: var(--evry-dark-blue);
+    font-family: var(--font-family-inter);
+    font-weight: 700;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
+footer .item p {
+    color: var(--dark-grayish-blue);
+    font-family: var(--font-family-inter);
+    font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+    line-height: 2;
+}
+
+#menu {
+    display: none;
+    background-image: url('assets/images/icon-menu.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transform: rotate(-90deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+#menu.toggle {
+    background-image: url('assets/images/icon-menu-close.svg');
+    transform: rotate(0);
+
+}
+
+
+@media screen and (max-width:700px) {
+    :root {
+        /* width */
+        --width-view: 90%;
+    }
+
+   
+
+    nav {
+        background-color: var(--off-white);
+        position: absolute;
+        top: 1rem;
+        right: -5px;
+        width: 0px;
+        height: 100vh;
+        transition: width 0.3s ease-in-out;
+        margin-top: 2rem;
+
+    }
+
+    nav.active {
+        width: 200px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 1px;
+    }
+
+    nav ul li a {
+        display: inline-block;
+        padding: 0.5rem;
+        width: 100%;
+    }
+
+    nav ul li a:hover {
+        background-color: var(--grayish-blue);
+    }
+    nav ul li a.clicked {
+        background-color: var(--dark-grayish-blue);
+        color: var(--off-white);
+    }
+
+    #unoredred-list {
+        display: none;
+    }
+
+    #unoredred-list.active {
+        display: block;
+    }
+
+    #menu {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width:575px) {
+
+    header {
+        position:fixed;
+        top:0;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top:8rem;
+    }
+
+    .setion-one .text-part {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .setion-one .text-part p {
+        font-size: clamp(0.8rem, 3.2vw, 2rem);
+        margin-bottom: 1rem;
+    }
+
+    .setion-one .text-part button {
+        padding: 0.8rem clamp(0.8rem, 1.5vw, 3rem);
+    }
+
+    .section-two h2 {
+        font-size: clamp(1rem, 6.5vw, 3rem);
+    }
+
+    .section-two h3 {
+        font-size: clamp(0.8rem, 3.1vw, 1.5rem);
+    }
+
+    .section-two p {
+        font-size: clamp(0.5rem, 2.5vw, 1.5rem);
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer .item h2 {
+        font-size: clamp(1.5rem, 6vw, 3rem);
+    }
+
+    footer .item h3 {
+        font-size: clamp(1rem, 5.5vw, 2rem);
+    }
+
+    footer .item p {
+        font-size: clamp(0.5rem, 3.5vw, 1.5rem);
+    }
+
+}
